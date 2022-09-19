@@ -1,0 +1,20 @@
+
+import java.util.Scanner;
+public class Main {
+	
+	public static void main(String[] args) {
+		// Write your code here
+		Scanner s = new Scanner(System.in);
+		//reading a number whose table is to be print  
+				int n=s.nextInt();
+				
+//		System.out.print(n);       
+		  
+		//loop start execution form and execute until the condition i<=10 becomes false  
+		for(int i=1; i <= 10; i++)  
+		{  
+		//prints table of the entered number      
+		System.out.println(n*i);  
+		}  
+		}
+}
