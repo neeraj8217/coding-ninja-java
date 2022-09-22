@@ -1,0 +1,132 @@
+public class Solution {
+
+	public static void findLargest(int mat[][]){
+		
+        boolean isRow = true;
+        int largestSum = Integer.MIN_VALUE;
+        int num=0;
+        
+         int nRows = mat.length;
+        if(nRows == 0){
+            System.out.println("row " + num + " " + largestSum);
+            return;
+        }
+        
+        int mCols = mat[0].length;
+        
+        
+        for(int i=0 ; i<nRows ; i++){
+            int rowSum=0;
+            for(int j=0 ; j<mCols ; j++){
+                rowSum += mat[i][j];
+            }
+            
+            if(rowSum > largestSum){
+                largestSum = rowSum;
+                num=i;
+            }
+        }
+              
+        
+        for(int j=0 ; j<mCols ; j++){
+            int colSum = 0;
+            for(int i=0 ; i<nRows ; i++){
+                colSum += mat[i][j];
+            }
+            
+            if(colSum > largestSum){
+                largestSum = colSum;
+                num = j ;
+                isRow = false;
+            }
+        }
+        
+        if(isRow){
+            System.out.println("row " + num + " " + largestSum);
+        }else{
+            System.out.println("column " + num + " " + largestSum);
+        }
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// public class Solution {
+
+// 	public static void findLargest(int mat[][]){
+// 		//Your code goes here
+// 			int min = Integer.MIN_VALUE;
+// 			int index = -1;
+//         boolean isRow = true;
+//         int rsum = 0;
+			
+// 			for(int i=0; i<mat.length; i++) {
+// 				for(int j=0; j<mat[0].length; j++) {
+// 					rsum = rsum+mat[i][j];
+// 					}
+// 				if(rsum>min) {
+// 					min = rsum;
+// 					index = i;
+					
+// 				}
+// 			}
+// 			int cSum = 0;
+// 			for(int j = 0; j<mat[0].length;j++) {
+// 				for(int i=0;i<mat.length; i++) {
+// 					cSum = cSum + mat[i][j];
+// 				}
+// 				if(cSum>min) {
+//                     isRow = false;
+// 					min = cSum;
+// 					index = j;
+                    
+// 				}
+                
+// 			}
+//         if(isRow){
+//             System.out.println("row " + index + " " + rsum);
+//         }else{
+//             System.out.println("column " + index +" " + cSum);
+//         }
+// 	}
+
+// }
