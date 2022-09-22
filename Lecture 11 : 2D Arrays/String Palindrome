@@ -1,0 +1,14 @@
+public class Solution {
+
+	public static boolean isPalindrome(String str) {
+		
+        String check="";
+        for (int i=0;i<str.length();i++)
+        {
+            check=str.charAt(i)+check;
+        }
+        
+        return (check.equals(str));
+	}
+
+}
